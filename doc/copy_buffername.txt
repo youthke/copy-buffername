@@ -1,0 +1,42 @@
+A Neovim plugin to copy current buffer name to clipboard.
+
+==============================================================================
+CONTENTS                                                    *copy-buffername-contents*
+  1. Introduction                 |copy-buffername-introduction|
+  2. Installation                 |copy-buffername-installation|
+  3. Commands                     |copy-buffername-commands|
+  4. Mappings                     |copy-buffername-mappings|
+
+==============================================================================
+1. Introduction                                             *copy-buffername-introduction*
+
+  This plugin provides a simple command to copy the current buffer's filename
+  (without path) to your system clipboard. This can be useful for quickly
+  getting the filename for various purposes.
+
+==============================================================================
+2. Installation                                             *copy-buffername-installation*
+
+  Install with your favorite plugin manager.
+
+  lazy.nvim:
+  >lua
+  {
+    'your-github-username/copy-buffername',
+    config = function()
+      require('copy_buffername_plugin').setup()
+    end,
+  },
+  <
+
+==============================================================================
+3. Commands                                                 *copy-buffername-commands*
+
+  :CopyBufferName               Copies the current buffer's filename to the
+                                system clipboard. If the buffer is unnamed,
+                                it will display a notification.
+
+==============================================================================
+4. Mappings                                                 *copy-buffername-mappings*
+
+  <Leader>cb                    (normal mode) Execute :CopyBufferName
